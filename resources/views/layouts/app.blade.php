@@ -9,6 +9,8 @@
 
     <!-- Styles -->
     <link href="{{ url('css/all.css') }}" rel="stylesheet">
+
+    @yield('styles')
 </head>
 <body id="app-layout">
     <nav class="navbar navbar-default navbar-static-top">
@@ -33,6 +35,7 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
                     <li><a href="{{ url('/home') }}">Home</a></li>
+                    <li><a href="{{ url('/members') }}">Member</a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
@@ -61,5 +64,6 @@
 
     <!-- JavaScripts -->
      <script src="{{ url('js/all.js') }}"></script>
+    @yield('scripts')
 </body>
 </html>

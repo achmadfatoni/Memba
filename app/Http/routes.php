@@ -23,4 +23,15 @@ Route::group(['middleware' => 'web'], function () {
     Route::auth();
 
     Route::get('/home', 'HomeController@index');
+
+    Route::get('/members/data', 'MembersController@data');
+    Route::get('/members', 'MembersController@index');
+
+    /**
+     * Api
+     */
+    Route::group(['prefix' => 'api'], function () {
+        Route::get('members', 'Api\MembersController@index');
+    });
+
 });

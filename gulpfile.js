@@ -17,8 +17,11 @@ elixir(function(mix) {
         'fonts.css',
         'bootstrap.min.css',
         'app.css',
-    ]).scripts([
+    ])
+        .styles(['jquery.dataTables.min.css'], 'public/css/dataTables.css')
+        .scripts([
         'jquery.min.js',
         'bootstrap.min.js'
-    ]);
+    ])
+        .scripts(['jquery.dataTables.min.js'], 'public/js/dataTables.js');
 });
